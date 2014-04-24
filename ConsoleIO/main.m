@@ -8,15 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+#import "console.h"
+
 int main(int argc, const char * argv[])
 {
 
   @autoreleasepool {
-      
-      // insert code here...
-      NSLog(@"Hello, World!");
-      
+
+    int anInteger = getIntegerFromConsole(@"Input an integer:");
+    float aFloat = getDecimalFromConsole(@"Input a float:");
+    NSString *aString = getStringFromConsole(@"Input a word");
+    
+    NSLog(@"The integer: %d", anInteger);
+    NSLog(@"The float: %f", aFloat);
+    NSLog(@"The string: %@", aString);
   }
-    return 0;
+  
+  return 0;
 }
 
